@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66.395" height="66.395" viewBox="0 0 66.395 66.395">
+  <g id="parquet" transform="translate(-1 -1)">
+    <g id="Group_112" data-name="Group 112" transform="translate(1.221 2.921)">
+      <path id="Path_137" data-name="Path 137" d="M17,2H33.063V34.126H17Z" transform="translate(-0.937 -2)" fill="#57a4ff"/>
+      <path id="Path_138" data-name="Path 138" d="M32,2H64.126V18.063H32Z" transform="translate(0.126 -2)" fill="#57a4ff"/>
+      <path id="Path_139" data-name="Path 139" d="M32,32H48.063V64.126H32Z" transform="translate(0.126 0.126)" fill="#57a4ff"/>
+      <path id="Path_140" data-name="Path 140" d="M2,47H34.126V63.063H2Z" transform="translate(-2 1.19)" fill="#57a4ff"/>
+    </g>
+    <g id="Group_113" data-name="Group 113" transform="translate(1 1)">
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="1" cy="1" r="1" transform="translate(4 4)" fill="#004fac"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="1" cy="1" r="1" transform="translate(12 4)" fill="#004fac"/>
+      <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(20 4)" fill="#004fac"/>
+      <circle id="Ellipse_7" data-name="Ellipse 7" cx="1" cy="1" r="1" transform="translate(28 4)" fill="#004fac"/>
+      <path id="Path_141" data-name="Path 141" d="M66.324,1H2.071A1.071,1.071,0,0,0,1,2.071V66.324a1.071,1.071,0,0,0,1.071,1.071H66.324a1.071,1.071,0,0,0,1.071-1.071V2.071A1.071,1.071,0,0,0,66.324,1ZM35.268,33.126V19.2H65.253V33.126ZM33.126,49.19H3.142V35.268H33.126ZM65.253,17.063H35.268V3.142H65.253ZM33.126,3.142V33.126H19.2V3.142Zm-29.985,0H17.063V33.126H3.142Zm0,48.19H33.126V65.253H3.142ZM35.268,65.253V35.268H49.19V65.253Zm29.985,0H51.331V35.268H65.253Z" transform="translate(-1 -1)" fill="#004fac"/>
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="1" cy="1" r="1" transform="translate(60 4)" fill="#004fac"/>
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="1" cy="1" r="1" transform="translate(60 12)" fill="#004fac"/>
+      <ellipse id="Ellipse_10" data-name="Ellipse 10" cx="1" cy="1.5" rx="1" ry="1.5" transform="translate(60 20)" fill="#004fac"/>
+      <circle id="Ellipse_11" data-name="Ellipse 11" cx="1" cy="1" r="1" transform="translate(60 28)" fill="#004fac"/>
+      <path id="Path_142" data-name="Path 142" d="M28.071,27.992a1.071,1.071,0,0,0,1.071-1.071V14.071a1.071,1.071,0,1,0-2.142,0V26.921A1.071,1.071,0,0,0,28.071,27.992Z" transform="translate(0.843 -0.149)" fill="#004fac"/>
+      <path id="Path_143" data-name="Path 143" d="M36.071,7.142h8.567a1.071,1.071,0,1,0,0-2.142H36.071a1.071,1.071,0,1,0,0,2.142Z" transform="translate(1.41 -0.716)" fill="#004fac"/>
+      <circle id="Ellipse_12" data-name="Ellipse 12" cx="1" cy="1" r="1" transform="translate(60 60)" fill="#004fac"/>
+      <ellipse id="Ellipse_13" data-name="Ellipse 13" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(53 60)" fill="#004fac"/>
+      <ellipse id="Ellipse_14" data-name="Ellipse 14" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(43 60)" fill="#004fac"/>
+      <circle id="Ellipse_15" data-name="Ellipse 15" cx="1" cy="1" r="1" transform="translate(37 60)" fill="#004fac"/>
+      <circle id="Ellipse_16" data-name="Ellipse 16" cx="1" cy="1" r="1" transform="translate(4 60)" fill="#004fac"/>
+      <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="1" cy="0.5" rx="1" ry="0.5" transform="translate(4 53)" fill="#004fac"/>
+      <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="1" cy="1.5" rx="1" ry="1.5" transform="translate(4 43)" fill="#004fac"/>
+      <circle id="Ellipse_19" data-name="Ellipse 19" cx="1" cy="1" r="1" transform="translate(4 37)" fill="#004fac"/>
+      <path id="Path_144" data-name="Path 144" d="M36.071,37A1.071,1.071,0,0,0,35,38.071V50.921a1.071,1.071,0,1,0,2.142,0V38.071A1.071,1.071,0,0,0,36.071,37Z" transform="translate(1.41 1.552)" fill="#004fac"/>
+      <path id="Path_145" data-name="Path 145" d="M28.638,57H20.071a1.071,1.071,0,1,0,0,2.142h8.567a1.071,1.071,0,0,0,0-2.142Z" transform="translate(0.276 2.969)" fill="#004fac"/>
+    </g>
+  </g>
+</svg>
