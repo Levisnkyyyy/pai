@@ -1,11 +1,12 @@
 import React from "react"
-import Service, {Servic2e} from "../components/services";
+import Service, {Servic2e} from "../components/sections/services";
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/utilities/seo"
 import slideshow from "../img/slideshow.jpeg"
-import Infokey from '../components/infokeys';
-import Faq from '../components/faq';
-import {GetQuoteComp} from '../components/api';
+import whyusman from "../img/whyusmancut.png";
+import Infokey from '../components/sections/infokeys';
+import Faq from '../components/sections/faq';
+import {Quote} from '../components/sections/quote';
 import {Link} from 'gatsby';
 export const LocContext = React.createContext({});
 
@@ -26,7 +27,8 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    return   <LocContext.Provider value={this.props.location}><Layout page="home" navbarServiceClick={this.changeService}>
+    return   <LocContext.Provider value={this.props.location}>
+      <Layout page="home" navbarServiceClick={this.changeService}>
     <SEO title="בית" />
     <section id="aboutus">
     <div className="container">
@@ -35,9 +37,11 @@ class IndexPage extends React.Component {
           <div className="info">
             <hr />
             <label>ברוכים הבאים</label>
-            <h2>לפאי</h2>
-            <p className="bold" style={{fontSize: '1.1rem'}}>אנו חברה המתמחה בניקוי ספות ומוצרי טקסטיל בבית וברכב בשיטות מיוחדות באמצעות חומרים מתקדמים בתקן אמריקאי.</p>
-            <p style={{marginTop: '7px'}}>עבודה יסודית על ידי אנשי המקצוע של פאי תעניק לכם תחושה חדשה למוצרי הטקסטיל שלכם. לרשותנו עומד מכשור מהמתקדמים בתחום, עם ציוד ניקיון מחומרים אורגניים וידידותיים לסביבה, בעלי חיים, ופעוטות. עם הצוות המקצועי שלנו, נגיע יחד לתוצאות מדהימות עם התחייבות מלאה לשביעות רצונכם.</p>
+            <h2>לפאי - פתרונות אסתטיקה יחודיים</h2>
+            <p className="bold" style={{fontSize: '1.1rem'}}>
+            אנו חברה המתמחה בניקוי ספות ומוצרי טקסטיל בבית וברכב בשיטות מיוחדות באמצעות חומרים מתקדמים בתקן אמריקאי.              </p>
+            <p style={{marginTop: '7px'}}>
+            עבודה יסודית על ידי אנשי המקצוע של פאי תעניק לכם תחושה חדשה למוצרי הטקסטיל שלכם. לרשותנו עומד מכשור מהמתקדמים בתחום, עם ציוד ניקיון מחומרים אורגניים וידידותיים לסביבה, בעלי חיים, ופעוטות. עם הצוות המקצועי שלנו, נגיע יחד לתוצאות מדהימות עם התחייבות מלאה לשביעות רצונכם.              </p>
             <img src={slideshow} alt="ניקוי ספות פאי" />
           </div>
         </div>
@@ -73,9 +77,9 @@ class IndexPage extends React.Component {
             </p>
           </div>
           <div className="column">
-            <h3 className="keytitle"><i className="icofont-ui-check"></i> שירות מקצועי</h3>
+            <h3 className="keytitle"><i className="icofont-ui-check"></i> שירות ישר ומקצועי</h3>
             <p>
-                יש ברשותינו את המכונות הכי חדישות כיום, עם העובדים הכי טובים שיש! עובדי החברה עוברים הסמכה מקצועית בתחום ניקיון הבית והרכב ומספקים שירות מקצועי ואדיב.
+                יש ברשותינו את המכונות הכי חדישות כיום, עם צוות עובדים מקצועי במיוחד! עובדי החברה עוברים הסמכה מקצועית בתחום ניקיון הבית והרכב ומספקים שירות מקצועי ואדיב.
             </p>
           </div>
           <div className="column">
@@ -86,8 +90,8 @@ class IndexPage extends React.Component {
           </div>
         </div>
       </div>
-      <div className="rest-container">
-
+      <div className="rest-container is-hidden-touch">
+        <img src={whyusman} alt="למה אנחנו" />
       </div>
       <div className="bottombar">
         <div className="bar-container">
@@ -106,7 +110,7 @@ class IndexPage extends React.Component {
 
   </section>
   <Faq />
-  <GetQuoteComp />
+  <Quote />
 
 
   </Layout></LocContext.Provider>

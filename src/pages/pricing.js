@@ -1,7 +1,7 @@
 import React from "react"
 import { Redirect } from "@reach/router";
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/utilities/seo"
 import infodata from '../json/tabs.json';
 
 class PricingContainer extends React.Component {
@@ -60,26 +60,18 @@ class PricingPage extends React.Component {
       redirectTo: null
     }
   }
-  changeService = (service,index)=> {
-    if(service === 'houses') {
-     // this.setState({redirectTo: '/#houses'});
-    }
-     else {
-    //   this.setState({redirectTo: '/#cars'});
-     }
-  }
   render() {
     if(this.state.redirectTo != null) {
       return <Redirect to={this.state.redirectTo} />
     }
-    return   <Layout page="pricing" navbarServiceClick={this.changeService}>
+    return   <Layout page="מחירון">
     <SEO title="מחירון" />
     <div className="container pricepage">
       <h2 className="title">ספות ומוצרי טקסטיל</h2>
       <PricingContainer type="houses" />
       <h2 className="title cars">רכב ואביזרים</h2>
       <PricingContainer type="cars" />
-      <div style={{marginTop: '80px'}}>
+      <div style={{marginTop: '80px', marginRight: '5px'}}>
         <ul>
           <li> * כל המחירים ללא מע"מ</li>
           <li> * המחיר עשוי להשתנות במידה והפריט לניקוי לא עומד בקריטריון המתאים</li>

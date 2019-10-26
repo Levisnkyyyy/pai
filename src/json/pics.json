@@ -1,0 +1,27 @@
+[
+    {
+        "service": "ספות",
+        "images": [
+            "sofa1.png", "sofa2.png"
+        ]
+    },
+    {
+        "service": "פנסים",
+        "images": [
+            "lights.png", "lights2.png","lights3.png"
+        ]
+    },
+    {
+        "service": "כסאות וריפודים",
+        "images": [
+            "carchair.png", "carchair2.png","carchair3.png"
+        ]
+    }
+    ,
+    {
+        "service": "פוליש",
+        "images": [
+            "polish.png", "polish2.png","polish3.png"
+        ]
+    }
+]
