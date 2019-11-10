@@ -2,9 +2,10 @@ import React, {useEffect, useState, useRef, useContext} from 'react';
 import {TweenMax} from "gsap/TweenMax";
 import {Link} from 'gatsby';
 import infodata from '../../json/tabs.json';
+import pics from '../../json/pics.json';
 import {LocContext} from '../../pages/index';
 // FIX SCROLL TO ON BUILD VERSIONf
-
+import Slideshow from "../slideshow";
 
 function usePrevious(value) {
     const ref = useRef();
@@ -22,6 +23,8 @@ const Service = ({type, label, selected}) => {
     let textElm = useRef(null);
     const prevSelected = usePrevious(selected);
     let tween = useRef(null);
+    const [slideshow,setSlideshow] = useState([]);
+    const [slideshowLabel, setLabel] = useState("לפני ואחרי");
     useEffect(()=> {
         if(data.length === 0) {
             if(type === 'houses') {
@@ -41,11 +44,25 @@ const Service = ({type, label, selected}) => {
             } catch(e) {
     
             }
+            let found = pics.find((e) => (e.service === data[index].title));
+            if(found !== undefined) {
+                setSlideshow(found.slideshow);
+                if(found.label !== undefined) {
+                    setLabel(found.label);
+                }
+            } else {
+                if(slideshow.length !== 0) {
+                    setSlideshow([]);
+                }
+            }
         }
-
+        
+        
+        
 
     });
-    return   <>          
+    return   <>   
+           
     <div className="container">
     <div className="right-container">
         <label>{label}</label>
@@ -54,6 +71,19 @@ const Service = ({type, label, selected}) => {
         {(data.length !== 0) ? data[index].text : ''}
         </pre>
     </div>
+    
+    {slideshow.length !== 0 &&
+    <>
+    
+    <div className="slideshow-container">
+    
+        <Slideshow images={slideshow} label={slideshowLabel} />
+        </div>
+
+
+        </>
+    }
+    
     <div className="tabs-container">
         <div className="columns tabs">
             {data.map((info, i) =>
@@ -65,15 +95,17 @@ const Service = ({type, label, selected}) => {
             )}
         </div>
     </div>
-</div></>;
+</div>
+
+</>;
 }
 export default Service;
 
-class Tab extends React.Component {
+export class Tab extends React.Component {
     render() {
         let info = this.props.info;
         const content =
-            <div className="column is-2">
+            <div className="column">
                 <div onClick={this.props.onClick} className={(this.props.selected === 'true') ? 'tab selected' : 'tab'}>
                     <img src={info.image} alt={info.title} />
                     <p>{info.title}</p>

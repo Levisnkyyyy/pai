@@ -5,7 +5,7 @@ const DisplayMessages = () => {
   const [data, setData] = useState([]);
   useEffect(()=> {
     if(data.length === 0) {
-      axios.get("http://localhost:8080/newcontact.php?get=posts")
+      axios.get("/newcontact.php?get=posts")
       .then((dat) => {
         setData(dat.data);
       });
@@ -56,7 +56,7 @@ export class Quote extends React.Component {
         "Access-Control-Allow-Origin": "*",
     }
   };
-      axios.post('http://localhost:8080/newcontact.php', bodyData, axiosConfig
+      axios.post('/newcontact.php', bodyData, axiosConfig
     )
     .then(res => {
       this.setState({sent: true}); 
@@ -101,7 +101,7 @@ export class Quote extends React.Component {
             <input type="text" name="firstName" onChange={this.handleInputChange} placeholder="שם" />
             <input type="text" name="lastName" onChange={this.handleInputChange} placeholder="שם משפחה" />
             <input type="text" name="phone" onChange={this.handleInputChange} placeholder="מספר פלאפון" />
-            <input type="submit" className="btn" value="שלח" />
+            <button type="submit" className="btn submit" onClick={this.priceQuote}>שלח</button>
           </form>
           </>
           }

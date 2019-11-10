@@ -26,6 +26,7 @@ class PricingContainer extends React.Component {
       {this.state.data.map((info, index) =>
         
         <div className="column is-4" key={index}>
+          {info.pricing.length !== 0 &&
           <div className="service_price">
             <div className="service_price-info">
               <img src={'../'+info.image} alt={info.title} />
@@ -44,6 +45,7 @@ class PricingContainer extends React.Component {
               )}
             </div>
           </div>
+          }
         </div>
         
         )}
@@ -75,6 +77,7 @@ class PricingPage extends React.Component {
         <ul>
           <li> * כל המחירים ללא מע"מ</li>
           <li> * המחיר עשוי להשתנות במידה והפריט לניקוי לא עומד בקריטריון המתאים</li>
+          <li> * מינימום הזמנה 300 ש"ח</li>
         </ul>
       </div>
     </div>

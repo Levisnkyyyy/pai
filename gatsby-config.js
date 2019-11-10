@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `פאי - ניקוי ספות | ניקוי שטיחים | ניקוי מזרנים | ניקוי מושבי הרכב ועוד`,
-    description: `תיאור`,
-    author: `@benlevi`,
+    description: `ניקוי ספות מקצועי ויסודי, חברתינו מציעה ניקוי בבית וברכב לשלל הפריטים: מזרנים, מושבים, פוליש, ניקוי לאחר שיפוץ ועוד. פאי קלין מציעה שירותים בצפון, לרבות חיפה והקריות`,
+    author: `@paiclean`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +36,13 @@ module.exports = {
         ],
         display: 'swap'
       }
+    },    
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-146804018-2",
+      },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

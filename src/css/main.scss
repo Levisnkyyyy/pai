@@ -64,16 +64,23 @@ section {
 
 .header {
   @include viewport(false);//
-  background-image: linear-gradient(to right, rgba(255,255,255,0) , #dfdfe6  75% ), url("../img/newbg.png");
+  background-image: linear-gradient(to right, rgba(255,255,255,0) , #dfdfe6  75% ), url("../img/newbgsmall.png");
   @include desktop {
-    background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #dfdfe6  80% ), url("../img/newbg.png");
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #dfdfe6  80% ), url("../img/newbgsmall.png");
   }
   background-color: #cccccc;
 // height: 500px;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  
+  @supports (-webkit-overflow-scrolling: touch) {
+    background-attachment:scroll;
+  }
+  @supports not (-webkit-overflow-scrolling: touch) {
+    background-attachment: fixed;
+  }
+  
   position: relative;
   &.page {
     height: 240px !important;
@@ -124,7 +131,7 @@ section {
     &.home {
       h1 {
         span {
-          color: rgb(64, 134, 219);
+         // color: rgb(64, 134, 219);
 
 
         }
@@ -207,7 +214,7 @@ section {
               position: absolute;
               top: 50%;
               right: 50%;
-              width: 130px;
+              width: 150px;
               transform: translate(50%, -50%);
               .image {
                 display: inline;
@@ -242,7 +249,10 @@ section {
     .columns.links {
      // transform: translateY(35px);
      >.column {
-
+      @include desktop {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
       a {
         color: black;
         text-decoration: none;
@@ -419,8 +429,13 @@ transform: translateX(-55px);
           font-size: 3rem;
           color: $color-3;
           text-align: left;
+          i {
+            top: 15px;
+            position: relative;
+          }
         }
         .text {
+          padding-top: 20px;
           transform: translateY(14px);
           text-align:center;
           label {
@@ -472,6 +487,7 @@ transform: translateX(-55px);
       left: -50%;
       transform: translateX(50%);
       margin-top: 40px;
+      max-width: 300px;
     }
   }
   .info-keys {
@@ -891,11 +907,11 @@ background-position: bottom;
   }
   margin-top: 0;
   height: 400px;
-  background-image: linear-gradient(to top, rgba(255,255,255, 0), rgba(228,224,221, 0.9) 60%), url(../img/prefooter.png);
+  background-image: linear-gradient(to top, rgba(255,255,255, 0), rgba(228,224,221, 0.9) 60%), url(../img/prefooternew.png);
   background-size: cover;
   
   @include desktop {
-    background-image: linear-gradient(to right, rgba(255,255,255, 0), rgba(228,224,221, 1) 60%), url(../img/prefooter.png);
+    background-image: linear-gradient(to right, rgba(255,255,255, 0), rgba(228,224,221, 1) 60%), url(../img/prefooternew.png);
     background-attachment: fixed;
   }
   .container {
@@ -953,10 +969,11 @@ background-position: bottom;
             margin-bottom: 15px;
           }
         }
-        input[type=submit] {
+        input[type=submit], .submit {
           margin-top: 20px;
           border: none;
           width: 100%;
+          height: 50px;
         }
       }
     }
@@ -1337,5 +1354,114 @@ input, button {
   transition: background-color 0.7s ease;
   &.dim {
     background-color: rgba(0,0,0,0.6);
+  }
+}
+h4.beforeafter {
+  color: $color-2;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+.sorry {
+  text-align: center;
+  font-weight: 700;
+  margin: 15px auto;
+ // margin-top: 15px;
+  font-size: 1.4rem;
+}
+.sort {
+  overflow: hidden;
+  height: 54px;
+  transition: height 0.4s ease;
+  &.active {
+    height: 370px;
+    @include desktop {
+      height: 260px;
+    }
+    @include fullhd {
+      height: 190px;
+    }
+  }
+  &-info {
+    text-align: right;
+  //  text-decoration: underline;
+  }
+  .showall {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .title {
+    font-size: 1.5rem;
+    color: $color-2;
+    padding-right: 5px;
+    font-weight: 700;
+  }
+
+  &-service {
+    display: table;
+    margin-top: 15px;
+    h3 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding-right: 5px;
+     // display: inline-block;
+      display: table-cell;
+      width: 30px;
+    }
+    .sort-columns {
+      display: table-cell;
+    }
+    .sort-column {
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 15px;
+      padding: 5px 10px 5px 10px;
+      width: 170px;
+      margin-top: 5px;
+      &:hover {
+        background-color: rgba(87, 163, 255, 0.273);
+      }
+      img {
+        width: auto;
+        height: 30px;
+      }
+      label { 
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.slideshow-container {
+  overflow: hidden;
+
+  margin-top:15px;
+  direction: ltr;
+  position: relative;
+  text-align: center;
+ 
+
+  @include desktop {
+    position: absolute;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    right: auto;
+    transform: none;
+  }
+}
+
+.slideshow {
+  height: auto;
+  margin-top: 10px;
+  width: 290px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(87, 164, 255,0.3);
+  @include desktop {
+    width: 380px;
   }
 }

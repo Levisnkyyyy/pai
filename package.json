@@ -9,6 +9,7 @@
     "bulma": "^0.7.5",
     "gatsby": "^2.15.28",
     "gatsby-image": "^2.2.23",
+    "gatsby-plugin-google-analytics": "^2.1.23",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-offline": "^3.0.11",
@@ -23,9 +24,12 @@
     "react": "^16.10.1",
     "react-device-detect": "^1.9.10",
     "react-dom": "^16.10.1",
+    "react-ga": "^2.7.0",
     "react-google-sheets": "^0.4.0",
     "react-helmet": "^5.2.1",
-    "scrollmagic": "^2.0.7"
+    "react-responsive-carousel": "^3.1.51",
+    "scrollmagic": "^2.0.7",
+    "tabletop": "^1.6.2"
   },
   "devDependencies": {
     "json-loader": "^0.5.7",

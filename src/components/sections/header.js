@@ -105,7 +105,7 @@ class Header extends React.Component {
                   <a href="tel:0538585580"><i className="icofont-phone"></i></a>
                 </div>
                 <div className="menuicon is-hidden-desktop" style={{ display: 'inline-block' }} onClick={() => this.setState({ mobileMenu: !this.state.mobileMenu })}>
-                  <i class="icofont-navigation-menu"></i>
+                  <i className="icofont-navigation-menu"></i>
                 </div>
               </div>
               <div className="column pricebtn">
@@ -188,8 +188,10 @@ class Header extends React.Component {
                     <div className="column image">
                       <i className="icofont-clock-time"></i>
                     </div>
-                    <div className="column text">
-                      <label>שעות פעילות</label>
+                    <div className="column text" style={{paddingTop: 0}}>
+                      <label>מחלקת רכב</label>
+                      <p>א-ה 8:00-17:00</p>
+                      <label>מחלקת בית</label>
                       <p>א-ה 8:00-20:00</p>
                     </div>
                   </div>

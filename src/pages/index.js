@@ -8,8 +8,12 @@ import Infokey from '../components/sections/infokeys';
 import Faq from '../components/sections/faq';
 import {Quote} from '../components/sections/quote';
 import {Link} from 'gatsby';
+
 export const LocContext = React.createContext({});
 
+
+
+ // להוסיף טלפון עסק
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +33,7 @@ class IndexPage extends React.Component {
   render() {
     return   <LocContext.Provider value={this.props.location}>
       <Layout page="home" navbarServiceClick={this.changeService}>
-    <SEO title="בית" />
+    <SEO title="פאי פתרונות אסתטיקה יחודיים" />
     <section id="aboutus">
     <div className="container">
       <div className="columns">
@@ -37,7 +41,7 @@ class IndexPage extends React.Component {
           <div className="info">
             <hr />
             <label>ברוכים הבאים</label>
-            <h2>לפאי - פתרונות אסתטיקה יחודיים</h2>
+            <h2>לחברת פאי - פתרונות אסתטיקה יחודיים</h2>
             <p className="bold" style={{fontSize: '1.1rem'}}>
             אנו חברה המתמחה בניקוי ספות ומוצרי טקסטיל בבית וברכב בשיטות מיוחדות באמצעות חומרים מתקדמים בתקן אמריקאי.              </p>
             <p style={{marginTop: '7px'}}>

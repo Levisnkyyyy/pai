@@ -3,25 +3,32 @@
         "service": "ספות",
         "images": [
             "sofa1.png", "sofa2.png"
+        ],
+        "slideshow": [
+            "sofa/sofa1.jpg", "sofa/sofa1n.jpg", "sofa/sofa2.jpg", "sofa/sofa2n.jpg"
         ]
     },
     {
         "service": "פנסים",
         "images": [
             "lights.png", "lights2.png","lights3.png"
-        ]
+        ],
+        "slideshow": []
     },
     {
         "service": "כסאות וריפודים",
         "images": [
             "carchair.png", "carchair2.png","carchair3.png"
-        ]
+        ],
+        "slideshow": []
     }
     ,
     {
-        "service": "פוליש",
+        "service": "פוליש ווקס",
+        "label": "תמונות",
         "images": [
             "polish.png", "polish2.png","polish3.png"
-        ]
+        ],
+        "slideshow": ["polish/polish.png", "polish/polish2.png","polish/polish3.png"]
     }
 ]
